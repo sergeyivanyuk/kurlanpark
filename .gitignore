@@ -1,5 +1,7 @@
 /node_modules
 *.psd
+*.rar
+*.zip
 *.fig
 /.vscode
 

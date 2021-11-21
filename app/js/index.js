@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // modals
   const Modalmenu = document.querySelector('.modal-menu'),
+        ModalBanket = document.querySelector('.modal-menu-banket'),
        Modalchild = document.querySelector('.modal-child'), 
        ModalnotChild = document.querySelector('.modal-notChild'),
 
@@ -55,6 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
        ModalMusic = document.querySelector('.modal-music'),
        ModalLifts = document.querySelector('.modal-lifts'),
        ModalTubing = document.querySelector('.modal-tubing'),
+       ModalFaq = document.querySelector('.modal-faq'),
+       ModalKrl = document.querySelector('.modal-krl'),
+       ModalSale = document.querySelector('.modal-sale'),
+       ModalSales = document.querySelector('.modal-sales'),
+       ModalQuadro = document.querySelector('.modal-quadro'),
+       ModalDog = document.querySelector('.modal-dog'),
 
        ModalopenParking = document.querySelector('.modal-open-parking'),
        ModalopenCafe = document.querySelector('.modal-open-cafe'),
@@ -62,8 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
        ModalopenMusic = document.querySelector('.modal-open-music'),
        ModalopenSnowsky = document.querySelector('.modal-open-snowsky'),
        ModalopenTubing = document.querySelector('.modal-open-tubing'),
+       ModalopenFaq = document.querySelector('.open-modal-faq'),
+       ModalopenKrl = document.querySelector('.open-modal-krl'),
+       ModalopenSale = document.querySelector('.open-modal-sale'),
+       ModalopenSales = document.querySelector('.open-modal-sales'),
+       ModalopenQuadro = document.querySelector('.open-modal-quadro'),
+       ModalopenDog = document.querySelector('.open-modal-dog'),
 
        ModalOpen = document.querySelectorAll('.open-modal-menu'),
+       ModalOpenBanket = document.querySelectorAll('.open-modal-banket'),
        ModalOpenChild = document.querySelectorAll('#open-modal-child'),
        ModalOpenNotChild = document.querySelectorAll('#open-modal-notChild'),
        ModalClose = document.querySelectorAll('.modal-close'),
@@ -90,6 +104,27 @@ document.addEventListener('DOMContentLoaded', () => {
      };
      modalOpenMenu();
      modalCloseMenu();
+
+     const modalopenBanket = () => {
+      ModalOpenBanket.forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          ModalBanket.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      })
+     };
+   const modalCloseBanket = () => {
+    ModalClose.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        ModalBanket.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+   };
+   modalopenBanket();
+   modalCloseBanket();
 
      const modalOpenChild = () => {
       ModalOpenChild.forEach(item => {
@@ -238,6 +273,112 @@ const ModalTubingClose = () => {
 ModalTubingOpen();
 ModalTubingClose();
 
+const ModalFaqOpen = () => {
+  ModalopenFaq.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalFaq.classList.add('active');
+      document.body.style.overflow = 'hidden';
+  });
+};
+const ModalFaqClose = () => {
+  ModalClose.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalFaq.classList.remove('active');
+    });
+  });
+};
+ModalFaqOpen();
+ModalFaqClose();
+
+
+const ModalKrlOpen = () => {
+  ModalopenKrl.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalKrl.classList.add('active');
+      document.body.style.overflow = 'hidden';
+  });
+};
+const ModalKrlClose = () => {
+  ModalClose.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalKrl.classList.remove('active');
+    });
+  });
+};
+ModalKrlOpen()
+ModalKrlClose()
+
+const ModalSaleOpen = () => {
+  ModalopenSale.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalSale.classList.add('active');
+      document.body.style.overflow = 'hidden';
+  });
+};
+ModalSaleOpen()
+const ModalSaleClose = () => {
+  ModalClose.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalSale.classList.remove('active');
+    });
+  });
+};
+ModalSaleClose()
+const ModalSalesOpen = () => {
+  ModalopenSales.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalSales.classList.add('active');
+      document.body.style.overflow = 'hidden';
+  });
+};
+ModalSalesOpen()
+const ModalSalesClose = () => {
+  ModalClose.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalSales.classList.remove('active');
+    });
+  });
+};
+ModalSalesClose()
+const ModalQuadroOpen = () => {
+  ModalopenQuadro.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalQuadro.classList.add('active');
+      document.body.style.overflow = 'hidden';
+  });
+};
+ModalQuadroOpen()
+const ModalQuadroClose = () => {
+  ModalClose.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalQuadro.classList.remove('active');
+    });
+  });
+};
+ModalQuadroClose()
+
+const ModalDogOpen = () => {
+  ModalopenDog.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalDog.classList.add('active');
+      document.body.style.overflow = 'hidden';
+  });
+};
+ModalDogOpen()
+const ModalDogClose = () => {
+  ModalClose.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      ModalDog.classList.remove('active');
+    });
+  });
+};
+ModalDogClose()
     // Animation
 
     AOS.init();
@@ -392,4 +533,6 @@ ModalTubingClose();
         });
         menuCloseTouch();
         menuOpenTouch();
+
+       
 });
