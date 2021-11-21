@@ -3,6 +3,7 @@
 *.rar
 *.zip
 *.fig
+*.php
 /.vscode
 
 # testing
