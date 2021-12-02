@@ -47,8 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // modals
   const Modalmenu = document.querySelector('.modal-menu'),
         ModalBanket = document.querySelector('.modal-menu-banket'),
-       Modalchild = document.querySelector('.modal-child'), 
-       ModalnotChild = document.querySelector('.modal-notChild'),
 
        ModalParking = document.querySelector('.modal-parking'),
        ModalCafe = document.querySelector('.modal-cafe'),
@@ -78,8 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
        ModalOpen = document.querySelectorAll('.open-modal-menu'),
        ModalOpenBanket = document.querySelectorAll('.open-modal-banket'),
-       ModalOpenChild = document.querySelectorAll('#open-modal-child'),
-       ModalOpenNotChild = document.querySelectorAll('#open-modal-notChild'),
        ModalClose = document.querySelectorAll('.modal-close'),
        social = document.querySelector('.social'),
        arrowTop = document.querySelector('.arrow-top');
@@ -125,46 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
    };
    modalopenBanket();
    modalCloseBanket();
-
-     const modalOpenChild = () => {
-      ModalOpenChild.forEach(item => {
-        item.addEventListener('click', (e) => {
-          e.preventDefault();
-          Modalchild.classList.add('active');
-        });
-      })
-     };
-   const modalCloseChild = () => {
-    ModalClose.forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        Modalchild.classList.remove('active');
-      });
-    });
-   };
-   modalOpenChild();
-   modalCloseChild();
-   const modalOpenNotChild = () => {
-    ModalOpenNotChild.forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        ModalnotChild.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      });
-    })
-   };
- const modalCloseNotChild = () => {
-  ModalClose.forEach(item => {
-    item.addEventListener('click', (e) => {
-      e.preventDefault();
-      ModalnotChild.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-  });
- };
- modalOpenNotChild();   
- modalCloseNotChild();
-
  const modalOpenParking = () => {
   ModalopenParking.addEventListener('click', (e) => {
       e.preventDefault();
